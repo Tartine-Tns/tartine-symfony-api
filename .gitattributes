@@ -1,0 +1,4 @@
+# .gitattributes
+
+# Assurer que les fichiers de migration utilisent LF
+migrations/* text eol=lf

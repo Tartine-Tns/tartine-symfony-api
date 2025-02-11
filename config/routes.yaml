@@ -1,13 +1,35 @@
 controllers:
     resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
-
-api_login:
-    path: /api/login
-    methods: ['POST']
+        path: ../src/Controller/ # Définit le dossier contenant les contrôleurs
+        namespace: App\Controller # Spécifie l'espace de noms des contrôleurs
+    type: attribute # Indique que les routes sont définies via des attributs PHP
 
 api_doc:
-    path: /
-    controller: api_platform.swagger_ui.action
+    path: /api/doc # Définit l'URL de la documentation de l'API
+    controller: api_platform.swagger_ui.action # Utilise Swagger UI pour afficher la doc
+
+# Routes pour l'API des tâches
+task_index:
+    path: /api/tasks # Route pour récupérer toutes les tâches
+    methods: [GET]
+    controller: App\Controller\TaskController::index
+
+task_create:
+    path: /api/tasks # Route pour créer une nouvelle tâche
+    methods: [POST]
+    controller: App\Controller\TaskController::create
+
+task_show:
+    path: /api/tasks/{id} # Route pour afficher une tâche spécifique
+    methods: [GET]
+    controller: App\Controller\TaskController::show
+
+task_update:
+    path: /api/tasks/{id} # Route pour mettre à jour une tâche
+    methods: [PUT]
+    controller: App\Controller\TaskController::update
+
+task_delete:
+    path: /api/tasks/{id} # Route pour supprimer une tâche
+    methods: [DELETE]
+    controller: App\Controller\TaskController::delete
