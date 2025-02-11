@@ -1,4 +1,4 @@
-Une API simple pour gérer une liste de tâches avec Symfony et API Platform.
+Une API simple pour gérer une liste de tâches avec Symfony 6 et API Platform 3 basé sur l'API de Pentiminax et modifié par Tartine-Tns pour répondre à la création de tâches.
 
 
 🚀 Fonctionnalités
@@ -22,18 +22,18 @@ Une API simple pour gérer une liste de tâches avec Symfony et API Platform.
 📦 Installation
 
 - Cloner le projet
-   # git clone https://github.com/Tartine-Tns/tartine-symfony-api.git
-   # cd tartine-symfony-api
+  "git clone https://github.com/Tartine-Tns/tartine-symfony-api.git"
+  "cd tartine-symfony-api"
 
 - Installer les dépendances
-   # composer install
+  "composer install"
    
 - Créer la base de données
-   # php bin/console doctrine:database:create
-   # php bin/console doctrine:migrations:migrate
+  "php bin/console doctrine:database:create"
+  "php bin/console doctrine:migrations:migrate"
 
 - Lancer le serveur Symfony
-   # symfony server:start
+  "symfony server:start"
 
 
 
